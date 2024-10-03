@@ -1,6 +1,6 @@
 Starting README
 
-#My Assessment Repository
+# My Assessment Repository
 
 **by Adam Amusa (G00400197@atu.ie)**
 
