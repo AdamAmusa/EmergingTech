@@ -12,12 +12,14 @@ function handleUserInput() {
 
     const conversationDiv = document.getElementById('conversation');
     const userMessage = document.createElement('div');
-    userMessage.textContent = 'You: ' + userInput;
+    userMessage.textContent = userInput;
+    userMessage.id = 'user-message';
     conversationDiv.appendChild(userMessage);
 
     const elizaResponse = getElizaResponse(userInput);
     const elizaMessage = document.createElement('div');
-    elizaMessage.textContent = 'Eliza: ' + elizaResponse;
+    elizaMessage.textContent = elizaResponse;
+    elizaMessage.id = 'eliza-message';
     conversationDiv.appendChild(elizaMessage);
 
     document.getElementById('user-input').value = '';
