@@ -47,6 +47,7 @@ function getReflection(input){
             words[i] = reflections[words[i]];
         }
     }
+    return words.join(" ");
 }
 
 
