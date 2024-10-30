@@ -10,17 +10,26 @@
 
 
 const responses = {
-
- "I am (.*)":[
-    "How long have you been {0}",
-    "Did you come to me because you are {0}",
-    "How does being {0} make you feel",
-    "Do you enjoy being {0}"
-],
-"(.*)": ["Tell me more about that", "I see", "I understand"],
-
-
-}
+    "I am (.*)": [
+        "How long have you been {0}",
+        "Did you come to me because you are {0}",
+        "How does being {0} make you feel",
+        "Do you enjoy being {0}"
+    ],
+    "I feel (.*)": [
+        "How long have you been {0}",
+        "Did you come to me because you are {0}",
+        "How does being {0} make you feel",
+        "Do you enjoy being {0}"
+    ],
+    "(.*)(mother|father|family|parent)(.*)": [
+        "Tell me more about your family.",
+        "How does that make you feel about your family?",
+        "What role does your family play in your thoughts?"
+    ],
+    
+    "(.*)": ["Tell me more about that", "I see", "I understand"]
+};
 
 const reflections = {
     "I": "you",
@@ -93,12 +102,11 @@ function handleUserInput() {
 //Check if the regex match is a reflection word and change it if its
 //return a response with the reflection word
 function getElizaResponse(input) {
-    const reflection = getReflection(input);
     for (const [pattern, responsesList] of Object.entries(responses)) {
         const regex = new RegExp(pattern, 'i'); // 'i' flag for case-insensitive matching
         const match = input.match(regex);
         if (match) {
-            console.log("Matched " + match);
+            console.log("Matched " + pattern);
             const reflectedGroups = match.slice(1).map(group => getReflection(group)); // Reflect each group
             const response = responsesList[Math.floor(Math.random() * responsesList.length)];
             let finalResponse = response;
