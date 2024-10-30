@@ -27,6 +27,11 @@ const responses = {
         "How does that make you feel about your family?",
         "What role does your family play in your thoughts?"
     ],
+    "(hello|hi|hey|yo|Good Morning|Good day)": [
+        "Hello! How are you feeling today?",
+        "Hi there! What’s on your mind?",
+        "Hey! How can I help you?"
+    ],
     
     "(.*)": ["Tell me more about that", "I see", "I understand"]
 };
