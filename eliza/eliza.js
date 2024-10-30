@@ -12,10 +12,10 @@
 const responses = {
 
  "I am (.*)":[
-    "How long have you been {}",
-    "Did you come to me because you are {}",
-    "How does being {} make you feel",
-    "Do you enjoy being {}"
+    "How long have you been {0}",
+    "Did you come to me because you are {0}",
+    "How does being {0} make you feel",
+    "Do you enjoy being {0}"
 ],
 "(.*)": ["Tell me more about that", "I see", "I understand"],
 
@@ -96,12 +96,13 @@ function getElizaResponse(input) {
     const reflection = getReflection(input);
     for (const [pattern, responsesList] of Object.entries(responses)) {
         const regex = new RegExp(pattern, 'i'); // 'i' flag for case-insensitive matching
-        const match = reflection.match(regex);
+        const match = input.match(regex);
         if (match) {
-            console.log("Matched " + reflection);
+            console.log("Matched " + match);
             const reflectedGroups = match.slice(1).map(group => getReflection(group)); // Reflect each group
             const response = responsesList[Math.floor(Math.random() * responsesList.length)];
             let finalResponse = response;
+            console.log(response);
             reflectedGroups.forEach((group, index) => {
                 finalResponse = finalResponse.replace(`{${index}}`, group);
             });
