@@ -8,7 +8,7 @@
 
 
 
-
+//response ideas assisted with Github copilot
 const responses = {
     "I am (.*)": [
         "How long have you been {0}",
@@ -27,11 +27,23 @@ const responses = {
         "How does that make you feel about your family?",
         "What role does your family play in your thoughts?"
     ],
-    "(hello|hi|hey|yo|Good Morning|Good day)": [
+    "^(hello|hi|hey|yo|Good Morning|Good day)$": [
         "Hello! How are you feeling today?",
         "Hi there! What’s on your mind?",
         "Hey! How can I help you?"
     ],
+    "I want (.*)": [
+        "Why do you want {0}?",
+        "What would you do if you got {0}?",
+        "If you got {0}, what would you do next?"
+    ],
+    "No":[
+        "Are you saying no just to be negative?",
+        "Why are you being negative?",
+        "Why not?",
+        "Are you sure?"
+    ],
+
     
     "(.*)": ["Tell me more about that", "I see", "I understand"]
 };
