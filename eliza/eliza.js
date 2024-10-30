@@ -1,3 +1,33 @@
+
+//Object of reflections 
+//Array of responses {Pattern, Response}
+
+/*Reflex Function */
+//Parse the user input and store the reflection using the reflection object
+
+
+/*Response Function*/
+//If the user input matches the response pattern
+//Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
+//Select a random response from the pattern 
+//Check if the regex match is a reflection word and change it if its
+//return a response with the reflection word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Remove the button event listener since there's no button anymore
 document.getElementById('user-input').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
