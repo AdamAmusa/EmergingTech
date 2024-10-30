@@ -6,15 +6,11 @@
 //Parse the user input and store the reflection using the reflection object
 
 
-/*Response Function*/
-//If the user input matches the response pattern
-//Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
-//Select a random response from the pattern 
-//Check if the regex match is a reflection word and change it if its
-//return a response with the reflection word
+
 
 
 const responses = {
+
  "I am (.*)":[
     "How long have you been {}",
     "Did you come to me because you are {}",
@@ -22,6 +18,8 @@ const responses = {
     "Do you enjoy being {}"
 ],
 "(.*)": ["Tell me more about that", "I see", "I understand"],
+
+
 }
 
 const reflections = {
@@ -33,6 +31,7 @@ const reflections = {
     "your": "my",
     "yours": "mine",
     "are": "am",
+    "I'm": "you are",
 }
 
 
@@ -87,14 +86,27 @@ function handleUserInput() {
     conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
 
-
+/*Response Function*/
+//If the user input matches the response pattern
+//Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
+//Select a random response from the pattern 
+//Check if the regex match is a reflection word and change it if its
+//return a response with the reflection word
 function getElizaResponse(input) {
-    // Simple Eliza response logic
-    if (input.toLowerCase().includes('hello')) {
-        return 'Hello! How can I help you today?';
-    } else if (input.toLowerCase().includes('help')) {
-        return 'I am here to help you. What do you need assistance with?';
-    } else {
-        return 'Tell me more about that.';
+    const reflection = getReflection(input);
+    for (const [pattern, responsesList] of Object.entries(responses)) {
+        const regex = new RegExp(pattern, 'i'); // 'i' flag for case-insensitive matching
+        const match = reflection.match(regex);
+        if (match) {
+            console.log("Matched " + reflection);
+            const reflectedGroups = match.slice(1).map(group => getReflection(group)); // Reflect each group
+            const response = responsesList[Math.floor(Math.random() * responsesList.length)];
+            let finalResponse = response;
+            reflectedGroups.forEach((group, index) => {
+                finalResponse = finalResponse.replace(`{${index}}`, group);
+            });
+            return finalResponse;
+        }
     }
+    return "I'm not sure what you're trying to say";
 }
