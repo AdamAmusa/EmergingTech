@@ -14,10 +14,40 @@
 //return a response with the reflection word
 
 
+const responses = {
+ "I am (.*)":[
+    "How long have you been {}",
+    "Did you come to me because you are {}",
+    "How does being {} make you feel",
+    "Do you enjoy being {}"
+],
+"(.*)": ["Tell me more about that", "I see", "I understand"],
+}
+
+const reflections = {
+    "I": "you",
+    "me": "you",
+    "my": "your",
+    "am": "are",
+    "you": "I",
+    "your": "my",
+    "yours": "mine",
+    "are": "am",
+}
 
 
 
 
+
+
+function getReflection(input){
+    const words = input.split(" ");
+    for (let i = 0; i < words.length; i++){
+        if (reflections[words[i]]){
+            words[i] = reflections[words[i]];
+        }
+    }
+}
 
 
 
@@ -55,6 +85,8 @@ function handleUserInput() {
     document.getElementById('user-input').value = '';
     conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
+
+function 
 
 function getElizaResponse(input) {
     // Simple Eliza response logic
