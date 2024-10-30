@@ -86,7 +86,6 @@ function handleUserInput() {
     conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
 
-function 
 
 function getElizaResponse(input) {
     // Simple Eliza response logic
