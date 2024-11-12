@@ -2,12 +2,11 @@
   uses: peaceiris/actions-gh-pages@v4
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
-    publish_dir: ./main/eliza
-    publish_branch: gh-pages
+    publish_dir: ./eliza
+    publish_branch: main/eliza
     cname: eliza.adam.dev
     user_name: 'Adam'
-    user_email: '
-    commit_message: 'Deploy: ${{ github.sha }}'
+
 
 
 
