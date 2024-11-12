@@ -3,6 +3,13 @@
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
     publish_dir: ./main/eliza
+    publish_branch: gh-pages
+    cname: eliza.adam.dev
+    user_name: 'Adam'
+    user_email: '
+    commit_message: 'Deploy: ${{ github.sha }}'
+
+
 
 
                
