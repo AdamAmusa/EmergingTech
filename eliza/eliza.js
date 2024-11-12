@@ -16,7 +16,19 @@ const responses = {
         "How does being {0} make you feel",
         "Do you enjoy being {0}"
     ],
-    "I feel (.*)": [
+    "^(.*)(I am feeling)(.*)$": [
+        "How long have you been {1}",
+        "Did you come to me because you are {1}",
+        "How does being {1} make you feel",
+        "Do you enjoy being {1}"
+    ],
+   "I feel (.*)": [
+        "How long have you been {0}",
+        "Did you come to me because you are {0}",
+        "How does being {0} make you feel",
+        "Do you enjoy being {0}"
+    ],
+    "I'm feeling (.*)": [
         "How long have you been {0}",
         "Did you come to me because you are {0}",
         "How does being {0} make you feel",
@@ -43,6 +55,7 @@ const responses = {
         "Why not?",
         "Are you sure?"
     ],
+
 
     
     "(.*)": ["Tell me more about that", "I see", "I understand"]
