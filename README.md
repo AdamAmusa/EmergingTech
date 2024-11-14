@@ -41,5 +41,7 @@ This repository contains my assessment for the module
 ## Dependencies
 - **Trigrams.ipynb** and **/eliza** use their standard library
 
+### Running Eliza
+1. 
 
 -Hello from Group A
