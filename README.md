@@ -18,8 +18,13 @@ This repository contains my assessment for the module
 ## Installation
 ### 1. Install [Python](https://www.python.org/downloads/)
 ### 2. Install Jupyter Notebook
-install with pip
+#### Using pip
     pip install notebook
+#### Using Conda
+    conda install -c conda-forge notebook
+
+    
+
     
 
 
