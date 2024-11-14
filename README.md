@@ -14,5 +14,9 @@ This repository contains my assessment for the module
 
 ## Usage
 
+## Dependencies
+### trigrams.pynb
+1. 
+
 
 -Hello from Group A
