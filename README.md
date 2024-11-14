@@ -15,7 +15,7 @@ This repository contains my assessment for the module
 ## Usage
 
 ## Dependencies
-### **Trigrams.ipynb** and **/eliza** use there standard library
+- **Trigrams.ipynb** and **/eliza** use there standard library
 
 
 -Hello from Group A
