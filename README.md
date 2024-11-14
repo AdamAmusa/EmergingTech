@@ -29,7 +29,7 @@ This repository contains my assessment for the module
 ### Running The Trigrams
  #### 1. Open the notebook
     jupyter notebook trigrams.ipynb
-- Alternatively you can open it using Visual Studio code or any editor which supports python notebook
+#### Alternatively you can open it using Visual Studio code or any editor which supports python notebook
   1. Navigate to the folder which contains the cloned project
    ```bash
    cd C:\Users\YourName\Projects\my_project\
