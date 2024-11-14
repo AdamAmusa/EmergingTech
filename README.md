@@ -18,9 +18,10 @@ This repository contains my assessment for the module
 ## Installation
 ### 1. Install [Python](https://www.python.org/downloads/)
 ### 2. Install Jupyter Notebook
-    ``bash
+    ```bash
     pip install notebook
-    ``bash
+    
+    ```bash
     conda install jupyter
 
 
