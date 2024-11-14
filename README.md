@@ -10,5 +10,9 @@ This repository contains my assessment for the module
 1. Clone the repository
 2. Run the code
 
+##Installation
+
+##Usage
+
 
 -Hello from Group A
