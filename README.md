@@ -27,21 +27,39 @@ This repository contains my assessment for the module
     
 ## Usage
 ### Running The Trigram Notebook
- #### 1. Open the notebook
+ #### 1. **Open the notebook**
     jupyter notebook trigrams.ipynb
 #### - Alternatively you can open it using Visual Studio code or any editor which supports python notebook
-  **1. Navigate to the folder which contains the cloned project**
+  1. **Navigate to the folder which contains the cloned project**
    ```bash
    cd C:\Users\YourName\Projects\my_project\
    ```
-  **2. Open the project in Visual Studio Code**
+  2. **Open the project in Visual Studio Code**
   ```bash
    code .
 ```
+#### **2. Execute Cells in sequential order**
+
+#### **3. View the output**
+##### - The cells will process english text and generate trigrams
+##### - **Outputs include**:
+- A dictionary of trigrams
+- The percentage of words in the trigram that are real English words
+              
+
+
+## Running Eliza
+**1. Navigate to the folder which contains the cloned project**
+   ```bash
+   cd C:\Users\YourName\Projects\my_project\
+   ```
+**2. Open the project in Visual Studio Code**
+  ```bash
+   code .
+```
+**3. Open the ./eliza folder and open index.html in a browser**
+
+
+
 ## Dependencies
 - **Trigrams.ipynb** and **/eliza** use their standard library
-
-### Running Eliza
-1. 
-
--Hello from Group A
