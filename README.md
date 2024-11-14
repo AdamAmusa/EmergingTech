@@ -9,7 +9,7 @@ This repository contains my assessment for the module
 ## Getting Started
 ### 1. Clone the repository
 - git clone https://github.com/AdamAmusa/EmergingTech
-2. Run the code
+### 2. Run the code
   ### - Trigrams.ipynb
   - Execute each cell in sequential order
   ### - /eliza
