@@ -22,7 +22,8 @@ This repository contains my assessment for the module
     pip install notebook
 #### Using Conda
     conda install -c conda-forge notebook
-
+### Installation for ./eliza 
+  ## - Because index.html, eliza.js and style.css are native to browsers there is no need for additional installation.
     
 
     
