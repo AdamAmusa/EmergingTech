@@ -16,9 +16,7 @@ This repository contains my assessment for the module
 
 ## Dependencies
 ### trigrams.pynb
-1. Collections
-2. Random
-3. Json
+- Trigrams.pynb uses Python's standard library
 
 ### Eliza
 
