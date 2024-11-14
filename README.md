@@ -41,23 +41,25 @@ This repository contains my assessment for the module
 #### **2. Execute Cells in sequential order**
 
 #### **3. View the output**
-##### - The cells will process english text and generate trigrams
-##### - **Outputs include**:
+#### The cells will process english text and generate trigrams
+#### **Outputs include**:
 - A dictionary of trigrams
 - The percentage of words in the trigram that are real English words
               
 
 
 ## Running Eliza
-**1. Navigate to the folder which contains the cloned project**
+### **1. Navigate to the folder which contains the cloned project**
    ```bash
    cd C:\Users\YourName\Projects\my_project\
    ```
-**2. Open the project in Visual Studio Code**
+### **2. Open the project in Visual Studio Code**
   ```bash
    code .
 ```
-**3. Open the ./eliza folder and open index.html in a browser**
+### **3. Open the ./eliza folder and open index.html in a browser**
+
+### **4. Enter an input and eliza will stimulate a response like a therapist**
 
 
 
