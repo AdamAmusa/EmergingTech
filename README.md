@@ -16,9 +16,7 @@ This repository contains my assessment for the module
   - Open index.html in your preffered browser
 
 ## Installation
-### 1. Install python
-    pip install notebook
-
+### 1. Install [python].(https://www.python.org/downloads/)
 
 
 ## Usage
