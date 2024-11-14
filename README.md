@@ -21,8 +21,6 @@ This repository contains my assessment for the module
     ```bash
     pip install notebook
     
-    ```bash
-    conda install jupyter
 
 
 ## Usage
