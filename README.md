@@ -30,11 +30,11 @@ This repository contains my assessment for the module
  #### 1. Open the notebook
     jupyter notebook trigrams.ipynb
 #### Alternatively you can open it using Visual Studio code or any editor which supports python notebook
-  1. Navigate to the folder which contains the cloned project
+  **1. Navigate to the folder which contains the cloned project**
    ```bash
    cd C:\Users\YourName\Projects\my_project\
    ```
-  2. Open the project in Visual Studio Code
+  **2. Open the project in Visual Studio Code**
   ```bash
    code .
 ```
