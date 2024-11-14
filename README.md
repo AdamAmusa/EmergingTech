@@ -18,7 +18,7 @@ This repository contains my assessment for the module
 ## Installation
 ### 1. Install [Python](https://www.python.org/downloads/)
 ### 2. Install Jupyter Notebook
-    # install with pip
+    #install with pip
     pip install notebook
     
 
