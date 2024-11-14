@@ -15,12 +15,12 @@ This repository contains my assessment for the module
 ## Usage
 
 ## Dependencies
-#### trigrams.pynb
+### trigrams.pynb
 1. Collections
 2. Random
 3. Json
 
-#### Eliza
+### Eliza
 
 
 -Hello from Group A
