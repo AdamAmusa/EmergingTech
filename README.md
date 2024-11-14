@@ -16,7 +16,10 @@ This repository contains my assessment for the module
   - Open index.html in your preffered browser
 
 ## Installation
-### 1. Install [python](https://www.python.org/downloads/)
+### 1. Install [Python](https://www.python.org/downloads/)
+### 2. Install Jupyter Notebook
+    pip install notebook
+    conda install jupyter
 
 
 ## Usage
