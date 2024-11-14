@@ -34,7 +34,8 @@ This repository contains my assessment for the module
    ```bash
    cd C:\Users\YourName\Projects\my_project\
    ```
-  2. 
+  2. Open the project in Visual Studio Code
+  ```bash
    code . 
 ## Dependencies
 - **Trigrams.ipynb** and **/eliza** use their standard library
