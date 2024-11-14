@@ -30,12 +30,10 @@ This repository contains my assessment for the module
  1. Open the notebook
     jupyter notebook trigrams.ipynb
 - Alternatively you can open it using Visual Studio code or any editor which supports python notebook
+  - Navigate to the folder which contains the cloned project
    ```bash
-   cd C:\Users\YourName\Projects\my_project
+   cd C:\Users\YourName\Projects\my_project\
    code . 
-
-
-
 ## Dependencies
 - **Trigrams.ipynb** and **/eliza** use their standard library
 
