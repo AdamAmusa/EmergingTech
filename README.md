@@ -25,11 +25,16 @@ This repository contains my assessment for the module
 ### 3. Installation for ./eliza 
    - Because index.html, eliza.js and style.css use languages that are native to browsers there is no need for additional installation.
     
-
-    
-
-
 ## Usage
+### Running The Trigrams
+ 1. Open the notebook
+    jupyter notebook trigrams.ipynb
+- Alternatively you can open it using Visual Studio code or any editor which supports python notebook
+   ```bash
+   cd C:\Users\YourName\Projects\my_project
+   code . 
+
+
 
 ## Dependencies
 - **Trigrams.ipynb** and **/eliza** use their standard library
