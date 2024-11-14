@@ -16,7 +16,11 @@ This repository contains my assessment for the module
 
 ## Dependencies
 #### trigrams.pynb
-1. 
+1. Collections
+2. Random
+3. Json
+
+#### Eliza
 
 
 -Hello from Group A
