@@ -15,9 +15,7 @@ jobs:
           submodules: recursive  # If you have submodules
 
       - name: Setup Hugo
-        uses: peaceiris/setup-hugo@v2
-        with:
-          hugo-version: '0.74.3'
+        uses: peaceiris/actions-hugo@v3.0.0
           # extended: true  # Uncomment if you need Hugo Extended
 
       - name: Build
