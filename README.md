@@ -1,67 +1,85 @@
-Starting README
+# Emerging Technologies Assessment Repository
 
-# My Assessment Repository
+**Author:** Adam Amusa (G00400197@atu.ie)
 
-**by Adam Amusa (G00400197@atu.ie)**
+##  Overview
 
-This repository contains my assessment for the module
+This repository contains an assessment for the module, featuring two main components:
+- A Trigrams Notebook (`trigrams.ipynb`)
+- An Eliza Chatbot (`/eliza`)
 
-## Getting Started
-### 1. Clone the repository
-- git clone https://github.com/AdamAmusa/EmergingTech
-### 2. Run the code
-  #### - Trigrams.ipynb
-  - Execute each cell in sequential order
-  #### - /eliza
-  - Open index.html in your preffered browser
+##  Getting Started
 
-## Installation
-### 1. Install [Python](https://www.python.org/downloads/)
-### 2. Install Jupyter Notebook
+### Prerequisites
+1. [Python](https://www.python.org/downloads/) installed
+2. Jupyter Notebook Installed
+
+
+### Repository Setup
+1. Clone the repository
+   ```bash
+   git clone https://github.com/AdamAmusa/EmergingTech
+   cd EmergingTech
+   ```
+
+##  Installation
+
+### Python and Jupyter Notebook
+
 #### Using pip
-    pip install notebook
+```bash
+pip install notebook
+```
+
 #### Using Conda
-    conda install -c conda-forge notebook
-### 3. Installation for ./eliza 
-   - Because index.html, eliza.js and style.css use languages that are native to browsers there is no need for additional installation.
-    
-## Usage
-### Running The Trigram Notebook
- #### 1. **Open the notebook**
-    jupyter notebook trigrams.ipynb
-#### - Alternatively you can open it using Visual Studio code or any editor which supports python notebook
-  1. **Navigate to the folder which contains the cloned project**
-   ```bash
-   cd C:\Users\YourName\Projects\my_project\
-   ```
-  2. **Open the project in Visual Studio Code**
-  ```bash
-   code .
+```bash
+conda install -c conda-forge notebook
 ```
-#### **2. Execute Cells in sequential order**
 
-#### **3. View the output**
-#### The cells will process english text and generate trigrams
-#### **Outputs include**:
-- A dictionary of trigrams
-- The percentage of words in the trigram that are real English words
-              
+### Eliza Component
+No additional installation required. The project uses standard web technologies.
 
+##  Usage
 
-## Running Eliza
-### **1. Navigate to the folder which contains the cloned project**
+### Trigrams Notebook
+
+#### Method 1: Jupyter Notebook
+1. Open the notebook
    ```bash
-   cd C:\Users\YourName\Projects\my_project\
+   jupyter notebook trigrams.ipynb
    ```
-### **2. Open the project in Visual Studio Code**
-  ```bash
+
+#### Method 2: Visual Studio Code
+1. Navigate to the project directory
+   ```bash
+   cd path/to/your/project
    code .
-```
-### **3. Open the ./eliza folder and open index.html in a browser**
+   ```
+2. Open `trigrams.ipynb`
 
-### **4. Enter an input and eliza will stimulate a response like a therapist**
+**Important:** Execute cells in sequential order
 
+#### Expected Outputs
+- Dictionary of trigrams
+- Percentage of trigram words that are real English words
 
+### Eliza Chatbot
 
-## Dependencies
-- **Trigrams.ipynb** and **/eliza** use their standard library
+1. Navigate to the https://adamamusa.github.io/EmergingTech/eliza/
+2. Interact with the chatbot by entering text inputs
+
+##  Dependencies
+
+Both components use standard libraries:
+- Trigrams Notebook: Python standard library
+- Eliza: Standard web technologies (HTML, JavaScript, CSS)
+
+##  Notes
+- Ensure you have a modern web browser for the Eliza component
+- Python 3.x recommended for the Trigrams Notebook
+
+##  Contribution
+Feel free to fork and explore the repository. Pull requests are welcome!
+
+##  License
+[Add your license information here]
