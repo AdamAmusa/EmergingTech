@@ -63,10 +63,25 @@ No additional installation required. The project uses standard web technologies.
 - Dictionary of trigrams
 - Percentage of trigram words that are real English words
 
+   ### How trigrams.ipynb Works
+   1. Reads text from an English literature
+   2. Splice all the text into segments of three characters, known as trigrams.
+   3. Enumerate the number of times each segment appears in the text.
+   4. Return a dictionary whose keys are the trigrams and whose value is the number of times the trigrams appear in the text.
+   5. Store and output a sequence of randomly generated characters using the trigrams and their values as their weight.
+   6. Compare the sequence of characters with real English words and determine the percentage that are English.
+
 ### Eliza Chatbot
 
 1. Navigate to the https://adamamusa.github.io/EmergingTech/eliza/
 2. Interact with the chatbot by entering text inputs
+   ### How Eliza Works
+   1. If the user input matches the response pattern
+   2. Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
+   3. Select a random response from the pattern 
+   4. Check if the regex match is a reflection word and change it if its
+   5. Return a response with the reflection word
+
 
 ##  Dependencies
 
@@ -77,9 +92,3 @@ Both components use standard libraries:
 ##  Notes
 - Ensure you have a modern web browser for the Eliza component
 - Python 3.x recommended for the Trigrams Notebook
-
-##  Contribution
-Feel free to fork and explore the repository. Pull requests are welcome!
-
-##  License
-[Add your license information here]
