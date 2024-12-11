@@ -1,7 +1,6 @@
 //response ideas assisted with Github copilot
 const responses = {
-    
-    
+      
     "(I am feeling)(.*)$": [
         "How long have you been {1}",
         "Did you come to me because you are {1}",
@@ -87,15 +86,16 @@ document.getElementById('user-input').addEventListener('keypress', function(even
     }
 });
 
+//Handle user input, invoke eliza replies and update message list displayed.
 function handleUserInput() {
     const userInput = document.getElementById('user-input').value;
-    if (userInput.trim() === '') return;
+    if (userInput.trim() === '') return; 
 
-    const conversationDiv = document.getElementById('conversation');
-    const userMessage = document.createElement('div');
-    userMessage.textContent = userInput;
-    userMessage.id = 'user-message';
-    conversationDiv.appendChild(userMessage);
+    const conversationDiv = document.getElementById('conversation'); 
+    const userMessage = document.createElement('div'); 
+    userMessage.textContent = userInput; 
+    userMessage.id = 'user-message'; 
+    conversationDiv.appendChild(userMessage); 
 
     const elizaResponse = getElizaResponse(userInput);
     const elizaMessage = document.createElement('div');
@@ -107,23 +107,30 @@ function handleUserInput() {
     conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
 
-/*Response Function*/
-//If the user input matches a response pattern
-//Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
-//Select a random response from the pattern 
-//Check if the regex match is a reflection word and change it if its
-//return a response with the reflection word
+/*Response Function
+If the user input matches a response pattern
+Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
+Select a random response from the pattern 
+Check if the regex match is a reflection word and change it if its
+return a response with the reflection word*/
+
+/* Used javascript.info for regex matching
+https://javascript.info/regexp-groups
+
+Algorithm inspired by Ian McLoughlin's Eliza implementation
+https://github.com/ianmcloughlin/2425_emerging_technologies/blob/main/03_eliza.ipynb 
+*/
 function getElizaResponse(input) {
     for (const [pattern, responsesList] of Object.entries(responses)) {
-        const regex = new RegExp(pattern, 'i'); // 'i' flag for case-insensitive matching
-        const match = input.match(regex);
+        const regex = new RegExp(pattern, 'i');
+        const match = input.match(regex); // Get the regex match
         if (match) {
             console.log("Matched " + pattern);
             const reflectedGroups = match.slice(1).map(group => getReflection(group)); // Reflect each group
-            const response = responsesList[Math.floor(Math.random() * responsesList.length)];
+            const response = responsesList[Math.floor(Math.random() * responsesList.length)]; // Select a random response
             let finalResponse = response;
             console.log(response);
-            reflectedGroups.forEach((group, index) => {
+            reflectedGroups.forEach((group, index) => { // Replace each group in the response
                 finalResponse = finalResponse.replace(`{${index}}`, group);
             });
             return finalResponse;
