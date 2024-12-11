@@ -1,34 +1,21 @@
-
-//Object of reflections 
-//Array of responses {Pattern, Response}
-
-/*Reflex Function */
-//Parse the user input and store the reflection using the reflection object
-
-
-
-
 //response ideas assisted with Github copilot
 const responses = {
-    "I am (.*)": [
-        "How long have you been {0}",
-        "Did you come to me because you are {0}",
-        "How does being {0} make you feel",
-        "Do you enjoy being {0}"
-    ],
-    "^(.*)(I am feeling)(.*)$": [
+    
+    
+    "(I am feeling)(.*)$": [
         "How long have you been {1}",
         "Did you come to me because you are {1}",
         "How does being {1} make you feel",
-        "Do you enjoy being {1}"
+        "Do you enjoy feeling {1}"
     ],
-   "I feel (.*)": [
+    "(?:I am|I'm|Im)(.*)": [
         "How long have you been {0}",
         "Did you come to me because you are {0}",
         "How does being {0} make you feel",
         "Do you enjoy being {0}"
     ],
-    "I'm feeling (.*)": [
+    
+   "I feel (.*)": [
         "How long have you been {0}",
         "Did you come to me because you are {0}",
         "How does being {0} make you feel",
@@ -71,13 +58,18 @@ const reflections = {
     "yours": "mine",
     "are": "am",
     "I'm": "you are",
+    "myself": "yourself",
+    "you're": "I am",
+    "you've": "I have",
+    "you'll": "I will",
+    "you'd": "I would",
 }
 
 
 
 
 
-
+//retrieve reflection word
 function getReflection(input){
     const words = input.split(" ");
     for (let i = 0; i < words.length; i++){
@@ -88,16 +80,6 @@ function getReflection(input){
     return words.join(" ");
 }
 
-
-
-
-
-
-
-
-
-
-// Remove the button event listener since there's no button anymore
 document.getElementById('user-input').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
@@ -126,7 +108,7 @@ function handleUserInput() {
 }
 
 /*Response Function*/
-//If the user input matches the response pattern
+//If the user input matches a response pattern
 //Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
 //Select a random response from the pattern 
 //Check if the regex match is a reflection word and change it if its
