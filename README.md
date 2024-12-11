@@ -37,7 +37,7 @@ conda install -c conda-forge notebook
 ```
 
 ### Eliza Component
-No additional installation is required. The project uses standard web technologies.
+You don't need to do any additional installation. The project uses standard web technologies.
 
 ##  Usage
 
