@@ -37,7 +37,7 @@ conda install -c conda-forge notebook
 ```
 
 ### Eliza Component
-No additional installation required. The project uses standard web technologies.
+No additional installation is required. The project uses standard web technologies.
 
 ##  Usage
 
@@ -71,7 +71,8 @@ No additional installation required. The project uses standard web technologies.
    5. Store and output a sequence of randomly generated characters using the trigrams and their values as their weight.
    </br>
    <img src="image-1.png" alt="Trigrams" width="450" height="300">
-   6. Compare the sequence of characters with real English words and determine the percentage that are English.
+   </br>
+   6. Compare the sequence of characters with real English words and determine the English percentage.
 
 ### Eliza Chatbot
 
@@ -98,4 +99,4 @@ Both components use standard libraries:
 - Python 3.x recommended for the Trigrams Notebook
 
 ## Resources
-#### Eliza and trigrams was enhanced from and inspired by https://github.com/ianmcloughlin/2425_emerging_technologies
+#### Eliza and trigrams were enhanced from and inspired by https://github.com/ianmcloughlin/2425_emerging_technologies
