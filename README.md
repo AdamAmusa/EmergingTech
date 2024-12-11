@@ -80,7 +80,7 @@ You don't need to do any additional installation. The project uses standard web 
 2. Interact with the chatbot by entering text inputs.
 </br>
 <img src="image.png" alt="Eliza Chatbot" width="350" height="350">
-  ### How Eliza Works
+  #### How Eliza Works
 1. If the user input matches the response pattern
 2. Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
 3. Select a random response from the pattern 
