@@ -78,13 +78,13 @@ You don't need to do any additional installation. The project uses standard web 
 
 1. Navigate to https://adamamusa.github.io/EmergingTech/eliza/
 2. Interact with the chatbot by entering text inputs.
-<img src="image.png" alt="Eliza Chatbot" width="350" height="350">
-#### How Eliza Works
-1. If the user input matches the response pattern
-2. Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
-3. Select a random response from the pattern 
-4. Check if the regex match is a reflection word and change it if its
-5. Return a response with the reflection word
+
+   #### How Eliza Works
+   1. If the user input matches the response pattern
+   2. Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
+   3. Select a random response from the pattern 
+   4. Check if the regex match is a reflection word and change it if its
+   5. Return a response with the reflection word
 
 
 ##  Dependencies
