@@ -78,7 +78,6 @@ You don't need to do any additional installation. The project uses standard web 
 
 1. Navigate to https://adamamusa.github.io/EmergingTech/eliza/
 2. Interact with the chatbot by entering text inputs.
-<br>
 <img src="image.png" alt="Eliza Chatbot" width="350" height="350">
 #### How Eliza Works
 1. If the user input matches the response pattern
