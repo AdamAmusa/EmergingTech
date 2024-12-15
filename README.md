@@ -69,18 +69,18 @@ You don't need to do any additional installation. The project uses standard web 
    3. Enumerate the number of times each segment appears in the text.
    4. Return a dictionary whose keys are the trigrams and whose value is the number of times the trigrams appear in the text.
    5. Store and output a sequence of randomly generated characters using the trigrams and their values as their weight.
-   </br>
+   <br>
    <img src="image-1.png" alt="Trigrams" width="450" height="300">
-   </br>
+   <br>
    6. Compare the sequence of characters with real English words and determine the English percentage.
 
-### Eliza Chatbot
+## Eliza Chatbot
 
 1. Navigate to https://adamamusa.github.io/EmergingTech/eliza/
 2. Interact with the chatbot by entering text inputs.
-</br>
+<br>
 <img src="image.png" alt="Eliza Chatbot" width="350" height="350">
-  #### How Eliza Works
+#### How Eliza Works
 1. If the user input matches the response pattern
 2. Get the regex match (Word difference) (r "I am (.*)" user input: "I am happy" regex match: "happy")
 3. Select a random response from the pattern 
