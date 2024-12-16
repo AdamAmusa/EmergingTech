@@ -13,14 +13,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive  # If you have submodules
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3.0.0
-          # extended: true  # Uncomment if you need Hugo Extended
-
-      - name: Build
-        run: hugo --minify
-
+          
       - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
