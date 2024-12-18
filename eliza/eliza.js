@@ -1,3 +1,5 @@
+let lastUserInput = "";
+
 //response ideas assisted with Github copilot
 const responses = {
       
@@ -7,20 +9,22 @@ const responses = {
         "How does being {1} make you feel",
         "Do you enjoy feeling {1}"
     ],
-    "(?:I am|I'm|Im)(.*)": [
-        "How long have you been {0}",
-        "Did you come to me because you are {0}",
-        "How does being {0} make you feel",
-        "Do you enjoy being {0}"
+    
+    "(I feel)(.*)$": [
+        "How long have you been {1}",
+        "Did you come to me because you are {1}",
+        "How does being {1} make you feel",
+        "Do you enjoy being {1}"
+    ],
+    "(I am|I'm|Im)(.*)$": [
+        "How long have you been {1}",
+        "Did you come to me because you are {1}",
+        "How does being {1} make you feel",
+        "Do you enjoy being {1}"
     ],
     
-   "I feel (.*)": [
-        "How long have you been {0}",
-        "Did you come to me because you are {0}",
-        "How does being {0} make you feel",
-        "Do you enjoy being {0}"
-    ],
-    "(.*)(mother|father|family|parent)(.*)": [
+   
+    "(.*)(mother|father|family|parent|dad|mum|mom)(.*)": [
         "Tell me more about your family.",
         "How does that make you feel about your family?",
         "What role does your family play in your thoughts?"
@@ -41,8 +45,6 @@ const responses = {
         "Why not?",
         "Are you sure?"
     ],
-
-
     
     "(.*)": ["Tell me more about that", "I see", "I understand"]
 };
@@ -64,7 +66,35 @@ const reflections = {
     "you'd": "I would",
 }
 
+//Repeated input responses
+//inspired by responses given from Eliza https://web.njit.edu/~ronkowit/eliza.html
+const repeatedInput = [
+   "Lets take a moment here. Think about what you just said.",
+    " Do you really expect a different answer if you keep repeating yourself?",
+    "Again we need to move on from this",
+    "Do you really expect a different answer if you keep repeating yourself?",
+    "I think we need to move on from this",
+];
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Display initial message
+    displayInitialMessage();
+});
+
+//Display initial message
+function displayInitialMessage() {
+    // Get the conversation list
+    const conversationDiv = document.getElementById('conversation');
+    // Create a new div element 
+    const elizaMessage = document.createElement('div');
+    // Set the text content
+    elizaMessage.textContent = "Hello! How can I help you today?";
+    // Set the id 
+    elizaMessage.id = 'eliza-message';
+    // Append the message to the conversation list  
+    conversationDiv.appendChild(elizaMessage); 
+
+}
 
 
 
@@ -88,6 +118,8 @@ document.getElementById('user-input').addEventListener('keypress', function(even
 
 //Handle user input, invoke eliza replies and update message list displayed.
 function handleUserInput() {
+    let elizaResponse = "";
+
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() === '') return; 
 
@@ -95,15 +127,22 @@ function handleUserInput() {
     const userMessage = document.createElement('div'); 
     userMessage.textContent = userInput; 
     userMessage.id = 'user-message'; 
-    conversationDiv.appendChild(userMessage); 
+    conversationDiv.appendChild(userMessage);
+    //If the user repeats the same input send a specific response
+    if(lastUserInput === userInput){ 
+        elizaResponse = repeatedInput[Math.floor(Math.random() * repeatedInput.length)];
+    }
+    else{ //Else get a response from eliza
+             elizaResponse = getElizaResponse(userInput); 
 
-    const elizaResponse = getElizaResponse(userInput);
+    }
     const elizaMessage = document.createElement('div');
     elizaMessage.textContent = elizaResponse;
     elizaMessage.id = 'eliza-message';
     conversationDiv.appendChild(elizaMessage);
 
     document.getElementById('user-input').value = '';
+    lastUserInput = userInput;
     conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
 
@@ -131,7 +170,8 @@ function getElizaResponse(input) {
             let finalResponse = response;
             console.log(response);
             reflectedGroups.forEach((group, index) => { // Replace each group in the response
-                finalResponse = finalResponse.replace(`{${index}}`, group);
+                console.log(group);
+                finalResponse = finalResponse.replace(`{${index}}`, group); // Replace the group in the response
             });
             return finalResponse;
         }
